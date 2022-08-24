@@ -22,10 +22,29 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
+        Me.Process1 = New System.Diagnostics.Process()
+        Me.SuspendLayout()
+        '
+        'Process1
+        '
+        Me.Process1.StartInfo.Domain = ""
+        Me.Process1.StartInfo.LoadUserProfile = False
+        Me.Process1.StartInfo.Password = Nothing
+        Me.Process1.StartInfo.StandardErrorEncoding = Nothing
+        Me.Process1.StartInfo.StandardOutputEncoding = Nothing
+        Me.Process1.StartInfo.UserName = ""
+        Me.Process1.SynchronizingObject = Me
+        '
+        'Form1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Name = "Form1"
         Me.Text = "Form1"
+        Me.ResumeLayout(False)
+
     End Sub
 
+    Friend WithEvents Process1 As Process
 End Class
